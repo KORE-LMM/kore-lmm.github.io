@@ -1,0 +1,766 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K19QDCVYV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0K19QDCVYV');
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="KORE/logo/logo2_new.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+ 
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Crimson+Text:italic|Neuton:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600|IM+Fell+English:italic|Amethysta:regular" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:700|IM+Fell+Double+Pica:italic|Ovo:regular" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500|Raleway:600|Frank+Ruhl+Libre:300" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
+  <!-- SEO Meta Tags -->
+  <title>KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints & Large Multimodal Models | Multimodal Evolving Knowledge Injection</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints">
+  <meta property="og:description" content="">
+  <!-- <meta property="og:image" content="assets/img/header-logo.png"> -->
+  <meta property="og:image" content="EVOKE/img/header-logo.png">
+  <meta property="og:url" content="https://evoke-lmm.github.io/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints">
+  <meta name="twitter:description" content="">
+  <!-- <meta name="twitter:image" content="assets/img/header-logo.png"> -->
+  <meta property="og:image" content="EVOKE/img/header-logo.png">
+
+  
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="KORE Research Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kore-lmm.github.io/">
+  
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "KORE",
+    "description": "",
+    "url": "https://kore-lmm.github.io/",
+    "keywords": "",
+    "author": {
+      "@type": "Organization",
+      "name": "KORE Research Team"
+    }
+  }
+  </script>
+
+  <!-- =======================================================
+  * Template Name: Anyar
+  * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1 class="sitename">Trust</h1> -->
+        <!-- <img src="assets/img/header-logo.png" class="img-fluid" id="logo-img"  alt=""> -->
+        <img src="KORE/logo/logo-header.png" class="img-fluid" id="logo-img"  alt="">
+
+        
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Explore</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#about">Background</a></li>
+              <li><a href="#kore">KORE</a></li> 
+              <li><a href="#augmentation">KORE-Augmentation</a></li>
+              <li><a href="#constrain">KORE-Constrain</a></li>
+              <li><a href="#main">Main Results</a></li>
+              <li><a href="#various">Various LMM scales and Architectures</a></li>
+              <li><a href="#ablation">Ablation Experiment</a></li>
+              <li><a href="#examples">Qualitative Examples</a></li>
+              <li><a href="#team">Team</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#about">Background</a></li> -->
+          <!-- <li><a href="#dimensions">Dimensions</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#discussion">Discussion</a></li> -->
+          <!-- <li><a href="https://trusteval-docs.readthedocs.io/">Docs</a></li> -->
+          <li><a href="KORE\slides\KORE.pdf">Slides</a></li>
+          <li><a href="https://github.com/EVOKE-LMM/EVOKE">Github</a></li>
+          <li><a href="https://arxiv.org/abs/2505.24449">Paper</a></li>
+          <li><a href="https://huggingface.co/datasets/kailinjiang/EVOKE">Dataset</a></li>
+          <li><a href="https://huggingface.co/kailinjiang/EVOKE-Models">Models</a></li>
+
+
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+     <!-- <div class="header-social-links">
+       <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+<!--        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>-->
+<!--        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>-->
+  <!-- </div>  -->
+
+    </div>
+  </header> 
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="img-background-container"> <!-- 使用 class 而不是 id -->
+        <div class="img-background" id="background"></div>
+      </div>
+
+      
+      <!-- <video autoplay muted  playsinline preload="auto"  id="background-video">
+         <source src="assets/img/background-video - 02-4.mp4" type="video/mp4"> 
+        <source src="KORE/video/kore.mp4" type="video/mp4">
+        
+        Your browser does not support the video tag.
+      </video> -->
+
+
+      <div class="container" id="title-container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="font-size: 60px;"><span>KORE</span></h2>
+            <h2 style="font-size: 42px;">Enhancing Knowledge Injection for <span>Large Multimodal Models via</span></h2>
+            <p style="font-size: 38px;">Knowledge-Oriented Augmentations and Constraints</p>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Teaser</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <p style="font-family: 'Raleway', sans-serif; font-size: 1.5em; text-align: center; font-weight: bold;">
+          "Knowledge-Oriented Control, Accurate Adaptation and Powerful Retention!"
+        </p>
+        <p style="text-align: right; font-family: 'Raleway', sans-serif; font-size: 1.5em; font-weight: bold;">
+          – Evolving Knowledge Injection
+        </p>
+        <br>
+
+        <div class="text-center my-3">
+          <img src="KORE/img/teaser.png" class="img-fluid my-1" alt="" style="width: 100%; height: auto;">
+        </div>
+        
+        <br><br>
+        
+        <!-- <div class="text-center my-3">
+          <img src="EVOKE/img/motivation.jpg" class="img-fluid my-2" alt="" style="width: 80%; height: auto;">
+        </div> -->
+        
+        <div class="row gy-10 my-4">
+        <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Introduction</h2>
+
+      </div>
+
+
+      <p style="font-size: 20px;">Large Multimodal Models encode extensive factual knowledge in their pre-trained weights. However, its knowledge remains static and limited, unable to keep pace with real-world developments, which hinders continuous knowledge acquisition. Effective knowledge injection thus becomes critical, involving two goals: <b>knowledge adaptation (injecting new knowledge)</b> and <b>knowledge retention (preserving old knowledge)</b>. Existing methods often struggle to learn new knowledge and suffer from catastrophic forgetting. To address this, we propose <span style="font-weight: bold; color: #6B46C1;">KORE</span>, a synergistic method of <span style="font-weight: bold; color: #6B46C1;">KnOwledge-oRientEd augmentations and constraints</span> for injecting new knowledge into large multimodal models while preserving old knowledge. Unlike general text or image data augmentation, KORE automatically converts individual knowledge items into <b>structured and comprehensive knowledge</b> to ensure that the model accurately learns new knowledge, enabling <b>accurate adaptation</b>. Meanwhile, KORE stores previous knowledge in the covariance matrix of LMM's linear layer activations and initializes the adapter by projecting the original weights into the matrix's null space, <b>defining a fine-tuning direction that minimizes interference with previous knowledge</b>, enabling <b>powerful retention</b>. Extensive experiments on various LMMs, including LLaVA-v1.5-7B, LLaVA-v1.5-13B, and Qwen2.5-VL-7B, show that KORE achieves superior new knowledge injection performance and effectively mitigates catastrophic forgetting.
+          </p>
+
+
+
+
+
+  
+
+    <section id="kore" class="models section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h2>Dynamic Benchmark</h2> -->
+        <h2><b>K</b>n<b>O</b>wledge-o<b>R</b>ient<b>E</b>d Augmentations and Constraints </h2>
+        
+
+      </div><!-- End Section Title -->
+      <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="col-11">
+          <p style="font-size: 20px;">Overview of <span style="font-weight: bold; color: #6B46C1;">KORE</span>, a synergistic method for knowledge-oriented augmentation and constraint. <span style="font-weight: bold; color: #6B46C1;">KORE-Augmentation</span> automatically converts each piece of knowledge into profound and structured knowledge. <span style="font-weight: bold; color: #6B46C1;">KORE-Constrain</span> minimizes interference with previous knowledge by initializing an adapter with null space that stores covariance matrix of previous knowledge.</p>
+
+        
+          <div class="text-center my-1">
+            <img src="KORE\img\method666.jpg" class="img-fluid my-1" alt="" style="width: 100%; height: auto;">
+        </div>
+            </div>
+    
+      
+    </section>
+    
+
+    <section id="augmentation" class="models section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h2>Dynamic Benchmark</h2> -->
+        <h2>KORE-Augmentation</h2>
+
+      </div><!-- End Section Title -->
+      <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="col-11">
+           <p style="font-size: 20px;">We observe that KORE-Augmentation augments the original knowledge into multi-rounds dialogues data <b>(forming the trunk)</b> and instruction tasks data <b>(forming the branches)</b>, thereby constructing a comprehensive and higher-level knowledge tree (Left part of Figure 3) that supports superior generalization and internalization of new knowledge. KORE-Augmentation moves beyond enabling models to accurately fit training data for &ldquo;data memorization&rdquo;. Instead, it focuses on helping the model comprehend and reason about the inherent logic and associations within the knowledge itself. This enables the model to think, internalize new knowledge, and effectively extract and manipulate the learned knowledge, thereby achieving real <span style="font-weight: bold; color: #6B46C1;">&ldquo;knowledge internalization&rdquo;</span>.</p>
+
+
+    
+      
+          <div class="text-center my-1">
+            <img src="KORE\img\augmentation_comparison666.png" class="img-fluid my-1" alt="" style="width: 100%; height: auto;">
+              </div>
+
+
+                  </div>
+    </section>
+
+
+
+    <section id="constrain" class="models section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h2>Dynamic Benchmark</h2> -->
+        <h2>KORE-Constrain</h2>
+
+      </div><!-- End Section Title -->
+      <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="col-11">
+           <p style="font-size: 20px;">Our analysis reveals two key findings: (1) Figure 4 (a) and (b) demonstrate that CO-SVD exhibits superior performance retention compared to Plain SVD, ASVD and suggest that multimodal knowledge can be effectively captured and stored in covariance matrix. (2) Figure 4 (c) shows that covariance matrices of linear layer inputs share similar outlier patterns for related tasks (POPE and HallusionBench), but differ from unrelated ones (MMBench), indicating that distinct tasks exhibit different outlier distributions in the covariance matrix. To build a multi-dimensional covariance matrix for <span style="font-weight: bold; color: #6B46C1;">KORE</span>, we finally sample 64 examples per category from OneVision's single-image subset (General, Doc/Chart/Screen, Math/Reasoning, General OCR).</p>
+          <div class="text-center my-3">
+            <img src="KORE\img\capture_knowledge666.png" class="img-fluid my-1" alt="" style="width: 100%; height: auto;">
+                  </div>
+        
+
+      </div>
+    </section>
+
+
+
+    <section id="main" class="pathway1 section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Analysis of Main Results</h2>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="container mt-5">
+            <div class="row"> 
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\1.png" alt="Image 1" class="img-fluid" />
+              </div>
+
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\2.png" alt="Image 3" class="img-fluid" />
+              </div>
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\5i.png" alt="Image 2" class="img-fluid" />
+              </div>   
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\3.png" alt="Image 3" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="various" class="pathway1 section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Analysis of Various LMM scales and Architectures</h2>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="container mt-5">
+            <div class="row"> 
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\4.png" alt="Image 1" class="img-fluid" />
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ablation" class="pathway1 section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>   Analysis of Ablation Experiments</h2>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="container mt-5">
+            <div class="row"> 
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\5.png" alt="Image 1" class="img-fluid" />
+              </div>
+              <div class="col-12 text-center mb-5">
+                <img src="KORE\table\7i.png" alt="Image 1" class="img-fluid" />
+              </div>
+   
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="examples" class="examples section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Qualitative Examples</h2>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="container mt-5">
+            <!-- Bootstrap Carousel -->
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner">
+                <!-- 第一张图片 -->
+                <div class="carousel-item active">
+                  <img src="KORE\img\case1.jpg" alt="Image 1" class="d-block w-100 img-fluid" />
+                </div>
+                <!-- 第二张图片 -->
+                <div class="carousel-item">
+                  <img src="KORE\img\case2.jpg" alt="Image 2" class="d-block w-100 img-fluid" />
+                </div>
+     
+              <!-- 控制按钮 -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .carousel {
+          height: 800px;
+          margin-bottom: 30px;
+        }
+
+        .carousel-inner {
+          height: 100%;
+        }
+
+        .carousel-item {
+          height: 100%;
+        }
+
+        .carousel-item img {
+          height: 100%;
+          object-fit: contain;
+          background-color: #f8f9fa;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          height: 100%;
+        }
+
+        /* 增加箭头大小 */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 10%;
+        }
+
+        .carousel-caption {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      </style>
+    </section>
+    
+    <!-- 引入 Bootstrap 的 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+      </div>
+      <div class="container">
+        <div class="team-avatars">
+          <a href="https://kailinjiang.github.io/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/jkl2.png" alt="Person 1">
+            </div>
+            <div class="avatar-name">Kailin Jiang</div>
+            <div class="avatar-info">USTC & BIGAI</div>
+          </a>
+          <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=OrglpdAAAAAJ&scilu=&scisig=ADIE8skAAAAAZyT8auspm9dah5HKpXi_ScY7hg8&gmla=AL3_zihUVOI1rEGhoQAy-v966dyAKK3rnrnZRPkWvfO5wmBVLD4T8H0FT8mqptp6yPa0AZNISSRWxr7NOw4WCn6f7WPY9iDU9AfKt_4EH0s&sciund=2293288061815271370" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE\author\jianghongbo.png" alt="Person 2">
+            </div>
+            <div class="avatar-name">Hongbo Jiang</div>
+            <div class="avatar-info">XMU-MAC</div>
+          </a>
+          <a href="https://flocrystal.github.io/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/jiangning.png" alt="Person 3">
+            </div>
+            <div class="avatar-name">Ning Jiang</div>
+            <div class="avatar-info">NEFU</div>
+          </a>
+          <a href="https://zhigao2017.github.io/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/gaozhi.png" alt="Person 4">
+            </div>
+            <div class="avatar-name">Zhi Gao</div>
+            <div class="avatar-info">BIT & BIGAI</div>
+          </a>
+          <a href="https://scholar.google.com/citations?hl=en&user=ngCBlN4AAAAJ&view_op=list_works&sortby=pubdate" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE\author\bijinhe.png" alt="Person 5">
+            </div>
+            <div class="avatar-name">Jinhe Bi</div>
+            <div class="avatar-info">LMU Munich</div>
+          </a>
+          <a href="" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/renyucheng.png" alt="Person 6">
+            </div>
+            <div class="avatar-name">Yucheng Ren</div>
+            <div class="avatar-info">USYD</div>
+          </a>
+          <a href="http://staff.ustc.edu.cn/~binli/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/libin.png" alt="Person 7">
+            </div>
+            <div class="avatar-name">Bin Li</div>
+            <div class="avatar-info">USTC</div>
+          </a>
+          <a href="https://yuntaodu.github.io/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/duyuntao.png" alt="Person 8">
+            </div>
+            <div class="avatar-name">Yuntao Du</div>
+            <div class="avatar-info">SDU</div>
+          </a>
+          <a href="https://faculty.ustc.edu.cn/liulei13/zh_CN/index.htm" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/liulei.png" alt="Person 9">
+            </div>
+            <div class="avatar-name">Lei Liu</div>
+            <div class="avatar-info">USTC</div>
+          </a>
+          <a href="https://liqing.io/" class="avatar-link">
+            <div class="avatar-circle">
+              <img src="KORE/author/liqing.png" alt="Person 10">
+            </div>
+            <div class="avatar-name">Qing Li</div>
+            <div class="avatar-info">BIGAI</div>
+          </a>
+        </div>
+      </div>
+
+      <style>
+        .team-avatars {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 8px;
+          padding: 20px;
+          width: 100%;
+          height: 200px; /* 添加固定高度，确保足够容纳头像和文字 */
+        }
+
+        .avatar-link {
+          text-decoration: none;
+          transition: transform 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: inherit;
+          height: 100%; /* 确保链接占满容器高度 */
+        }
+
+        .avatar-link:hover {
+          transform: scale(1.1);
+        }
+
+        .avatar-circle {
+          width: 122px;
+          height: 122px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 3px solid #fff;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          flex-shrink: 0; /* 防止头像被压缩 */
+        }
+
+        .avatar-circle img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .avatar-name {
+          font-size: 14px;
+          text-align: center;
+          color: #333;
+          margin-top: 8px;
+          font-weight: 500;
+          height: 20px; /* 固定名字高度 */
+          line-height: 20px; /* 确保文字垂直居中 */
+        }
+
+        .avatar-info {
+          font-size: 12px;
+          text-align: center;
+          color: #666;
+          margin-top: 4px;
+          height: 16px; /* 固定信息高度 */
+          line-height: 16px; /* 确保文字垂直居中 */
+        }
+      </style>
+
+    </section><!-- /Clients Section -->
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>BibTeX</h2>
+    </div>
+  <!-- 新增 BibTeX 栏目 -->
+<!-- 新增 BibTeX 栏目 -->
+<div class="team-bibtex" style="max-width: 950px; margin: 32px auto 50px auto; background: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 20px; position: relative;">
+  <!-- Copy按钮 -->
+
+
+
+  <button id="copy-bibtex" style="position: absolute; top: 15px; right: 15px; background: #6B46C1; color: white; border: 1px solid #8B5CF6; border-radius: 6px; padding: 8px 12px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background-color 0.3s;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="m5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>
+    Copy
+  </button>
+  
+  <!-- 代码容器 -->
+  <div style="background: white; border-radius: 6px; padding: 20px; margin-top: 40px; overflow-x: auto; border: 1px solid #e5e7eb;">
+    <pre id="bibtex-content" style="font-size: 14px; color: #333; background: none; border: none; margin: 0; padding: 0; font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace; white-space: pre; word-break: normal; min-width: max-content;">@article{jiang2025kore,
+  title = {KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints},
+  author={Jiang, Kailin and Jiang, Hongbo and Jiang, Ning and Gao, Zhi and Bi, Jinhe and Ren, Yuchen and Li, Bin and Du, Yuntao and Liu, Lei and Li, Qing},
+  year = {2025}
+}</pre>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const copyButton = document.getElementById('copy-bibtex');
+  const bibtexContent = document.getElementById('bibtex-content');
+  
+  copyButton.addEventListener('click', async function() {
+    try {
+      await navigator.clipboard.writeText(bibtexContent.textContent);
+      
+      // 临时改变按钮文本和样式
+      const originalText = copyButton.innerHTML;
+      copyButton.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"></polyline></svg>Copied!';
+      copyButton.style.background = '#059652';
+      
+      // 2秒后恢复原状
+      setTimeout(() => {
+        copyButton.innerHTML = originalText;
+        copyButton.style.background = '#6B46C1';
+      }, 2000);
+      
+    } catch (err) {
+      console.error('复制失败:', err);
+      // 降级方案：选中文本
+      const range = document.createRange();
+      range.selectNode(bibtexContent);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      
+      try {
+        document.execCommand('copy');
+        copyButton.innerHTML = 'Copied!';
+        setTimeout(() => {
+          copyButton.innerHTML = 'Copy';
+        }, 2000);
+      } catch (fallbackErr) {
+        alert('复制失败，请手动选择文本复制');
+      }
+    }
+  });
+  
+  // 按钮悬停效果
+  copyButton.addEventListener('mouseenter', function() {
+    this.style.background = '#8B5CF6';
+  });
+  
+  copyButton.addEventListener('mouseleave', function() {
+    if (this.style.background !== '#059652') {
+      this.style.background = '#6B46C1';
+    }
+  });
+});
+</script>
+  
+
+    <!-- booktitle={The Thirteenth International Conference on Learning Representations}, -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">KnOwledge-oRientEd</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <!-- General Email Section -->
+            <p style="font-size: 20px;"><strong>General Email:</strong></p>
+            <p style="font-size: 20px;"><span>Kailin Jiang: 
+                      <br>
+                      <span style="color: #F8FAFC; font-weight: bold;">jiangkailin@bigai.ai</span>
+                      <br>
+                      <span style="color: #F8FAFC; font-weight: bold;">kailinjiang@mail.ustc.edu.cn</span>
+                    </span></p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="font-size: 20px;">Useful Links</h4>
+          <ul style="font-size: 16px;">
+            <li><i class="bi bi-chevron-right"></i> <a href="https://evoke-lmm.github.io/">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://arxiv.org/abs/2505.24449">Paper</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="KORE\slides\KORE.pdf">Slides</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://github.com/EVOKE-LMM/EVOKE">Github</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://huggingface.co/datasets/kailinjiang/EVOKE">Dataset</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://huggingface.co/kailinjiang/EVOKE-Models">Models</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p style="color: #F8FAFC;">© <span>Copyright</span> <strong class="px-1 sitename">KnOwledge-oRientEd</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/table2.js"></script>
+  <script src="assets/js/anime.js"></script>
+  <script src="anime.min.js"></script>
+   <!-- 使用官方 CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> -->
+
+
+
+</body>
+
+
+
+
+</html>
