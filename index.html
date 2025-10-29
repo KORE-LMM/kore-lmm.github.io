@@ -122,7 +122,7 @@
               <li><a href="#about">Background</a></li>
               <li><a href="#kore">KORE</a></li> 
               <li><a href="#augmentation">KORE-Augmentation</a></li>
-              <li><a href="#constrain">KORE-Constrain</a></li>
+              <li><a href="#constrain">KORE-Constraint</a></li>
               <li><a href="#main">Main Results</a></li>
               <li><a href="#various">Various LMM scales and Architectures</a></li>
               <li><a href="#ablation">Ablation Experiment</a></li>
@@ -284,7 +284,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <!-- <h2>Dynamic Benchmark</h2> -->
-        <h2>KORE-Constrain</h2>
+        <h2>KORE-Constraint</h2>
 
       </div><!-- End Section Title -->
       <div class="row justify-content-center" data-aos="fade-up">
@@ -294,6 +294,44 @@
           <div class="text-center my-3">
             <img src="KORE\img\capture_knowledge666.png" class="img-fluid my-1" alt="" style="width: 100%; height: auto;">
                   </div>
+
+
+                  <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+                      <div class="col-12">
+                        <div class="accordion" id="trustModelRules">
+                          <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-bs-parent="#trustModelRules" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                                <strong>Finding 1:</strong>
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#trustModelRules">
+                              <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                                Figure 4 (a) and (b) demonstrate that CO-SVD exhibits superior performance retention compared to Plain SVD, ASVD and suggest that multimodal knowledge can be effectively captured and stored in covariance matrix.
+                              </div>
+                            </div>
+                          </div>
+                    
+                          <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-bs-parent="#trustModelRules" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                                <strong>Finding 2:</strong>
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#trustModelRules">
+                              <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                                Figure 4 (c) shows that covariance matrices of linear layer inputs share similar outlier patterns for related tasks (<em>e.g.</em> POPE and HallusionBench), but differ from unrelated ones (<em>e.g.</em> MMBench), indicating that distinct tasks exhibit different outlier distributions in the covariance matrix.
+                              </div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+    
         
 
       </div>
@@ -310,19 +348,136 @@
         <div class="row gy-4">
           <div class="container mt-5">
             <div class="row"> 
-              <div class="col-12 text-center mb-5">
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\1.png" alt="Image 1" class="img-fluid" />
               </div>
+              
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseOne" aria-expanded="true" aria-controls="observationCollapseOne" data-bs-parent="#observationsAccordion" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 1: KORE enables accurate adaptation for effectively injecting new knowledge.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseOne" class="accordion-collapse collapse show" aria-labelledby="observationHeadingOne" data-bs-parent="#observationsAccordion">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Specifically, KORE (rank=235) achieves improvements of 12.63 in CEM and 21.27 in F1-Score over the best baseline on EVOKE, even outperforming LoRA by more than twofold.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseTwo" aria-expanded="false" aria-controls="observationCollapseTwo" data-bs-parent="#observationsAccordion" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 2: KORE enables powerful retention for effectively preserving old knowledge.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseTwo" class="accordion-collapse collapse" aria-labelledby="observationHeadingTwo" data-bs-parent="#observationsAccordion">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Specifically, KORE (rank=235) outperforms LoRA across all knowledge retention tests, achieving top scores on OCR, M-DIS, HAL, and placing second on INS. Despite containing both multi-rounds dialogue and instruction tasks data, KORE-74K's performance on INS and M-IDU is suboptimal. We attribute this to the number of trainable parameters and the source of the covariance matrix. For instance, when r=256, KORE shows powerful retention performance, trailing Replay by a mere 2.31 on INS and outperforming it by 3.87 on M-IDU.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseThree" aria-expanded="false" aria-controls="observationCollapseThree" data-bs-parent="#observationsAccordion" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 3: KORE achieves remarkable holistic performance by harmonizing the dual objectives of knowledge injection.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseThree" class="accordion-collapse collapse" aria-labelledby="observationHeadingThree" data-bs-parent="#observationsAccordion">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Specifically, KORE (rank=235) achieves an 8.41 improvement over the strongest baseline, demonstrating its superior comprehensive performance. These gains arise from KORE's ability to optimize the trade-off between injecting and preserving knowledge.
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
 
-              <div class="col-12 text-center mb-5">
+              <div class="col-12 text-center mb-2">
+                <img src="KORE\table\5i.png" alt="Image 2" class="img-fluid" />
+              </div> 
+
+
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion1">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingFour">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseFour" aria-expanded="true" aria-controls="observationCollapseFour" data-bs-parent="#observationsAccordion1" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 4: KORE demonstrates superior performance across a wide spectrum of fine-grained knowledge.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseFour" class="accordion-collapse collapse show" aria-labelledby="observationHeadingFour" data-bs-parent="#observationsAccordion1">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Figure 5 compares 20 fine-grained News and Entity types from EVOKE. KORE consistently outperforms all baselines, demonstrating strong and comprehensive knowledge adaptation.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\2.png" alt="Image 3" class="img-fluid" />
               </div>
-              <div class="col-12 text-center mb-5">
-                <img src="KORE\table\5i.png" alt="Image 2" class="img-fluid" />
-              </div>   
-              <div class="col-12 text-center mb-5">
+              
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion2">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingFive">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseFive" aria-expanded="true" aria-controls="observationCollapseFive" data-bs-parent="#observationsAccordion2" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 5: KORE achieves competitive knowledge retention.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseFive" class="accordion-collapse collapse show" aria-labelledby="observationHeadingFive" data-bs-parent="#observationsAccordion2">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Specifically, KORE outperforms LoRA (e.g. 6.53↑ in Avg) and continual learning methods (e.g. EWC, LwF and SEFE), achieving top scores on OCRVQA, MMMU and Hall. Furthermore, by adjusting trainable parameters (rank=256) and covariance matrix source, it closely matches or even exceeds Replay.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\3.png" alt="Image 3" class="img-fluid" />
               </div>
+              
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion3">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingSix">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseSix" aria-expanded="true" aria-controls="observationCollapseSix" data-bs-parent="#observationsAccordion3" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 6: Specific constraints enhance knowledge retention and overall performance.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseSix" class="accordion-collapse collapse show" aria-labelledby="observationHeadingSix" data-bs-parent="#observationsAccordion3">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Table 3 shows that specific constraints slightly reduce K.A score but substantially improve K.R and overall performance. Figure 6 further shows that specific constraints enhance targeted knowledge retention, notably with a 7.17 gain on MME, demonstrating their potential for tailored knowledge retention.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -339,8 +494,44 @@
         <div class="row gy-4">
           <div class="container mt-5">
             <div class="row"> 
-              <div class="col-12 text-center mb-5">
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\4.png" alt="Image 1" class="img-fluid" />
+              </div>
+
+
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion7">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingSeven">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseSeven" aria-expanded="true" aria-controls="observationCollapseSeven" data-bs-parent="#observationsAccordion7" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 7: KORE shows enhanced superiority on a larger-scale LMM.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseSeven" class="accordion-collapse collapse show" aria-labelledby="observationHeadingSeven" data-bs-parent="#observationsAccordion7">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Table 4 shows that KORE surpasses LoRA (<em>e.g.</em> <span style="font-weight: bold;">16.63↑</span> in CEM and <span style="font-weight: bold;">21.64↑</span> in F1-Score) on EVOKE, and achieves superior K.R performance across all six dimensions including M-DIS. With an overall improvement of <span style="font-weight: bold;">10.74</span> over Replay, these results confirm KORE's strong potential for larger LMMs.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingEight">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseEight" aria-expanded="false" aria-controls="observationCollapseEight" data-bs-parent="#observationsAccordion7" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 8: KORE's effectiveness is not architecture-specific.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseEight" class="accordion-collapse collapse" aria-labelledby="observationHeadingEight" data-bs-parent="#observationsAccordion7">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            On Qwen2.5-VL <span style="font-size: 0.8em;">(7B)</span>, it surpasses LoRA (<em>e.g.</em> <span style="font-weight: bold;">12.63↑</span> in CEM and <span style="font-weight: bold;">21.27↑</span> in F1-Score) and Replay (<em>e.g.</em> <span style="font-weight: bold;">3.40↑</span> in Avg). Smaller improvement stems from Qwen2.5-VL's robust knowledge system, honed via three-stage training, which reduce marginal gains from knowledge injection (<em>e.g.</em> Comparing Table 1 and 4, Qwen2.5-VL <span style="font-size: 0.8em;">(7B)</span>'s gains are less than LLaVA-v1.5 <span style="font-size: 0.8em;">(7B)</span>'s with LoRA on EVOKE).
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
               </div>
 
               </div>
@@ -360,10 +551,46 @@
         <div class="row gy-4">
           <div class="container mt-5">
             <div class="row"> 
-              <div class="col-12 text-center mb-5">
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\5.png" alt="Image 1" class="img-fluid" />
               </div>
-              <div class="col-12 text-center mb-5">
+
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <div class="accordion" id="observationsAccordion8">
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingNine">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseNine" aria-expanded="true" aria-controls="observationCollapseNine" data-bs-parent="#observationsAccordion8" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 9: Larger rank enhance KORE's performance.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseNine" class="accordion-collapse collapse show" aria-labelledby="observationHeadingNine" data-bs-parent="#observationsAccordion8">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Figure 7 shows a clear trend: KORE's performance increases with higher rank and more trainable parameters on nearly all evaluations. KORE (rank=64) still surpasses Replay in Avg, only using less than half of parameters of Replay.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item" style="border: 2px solid #A896D4; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(168, 150, 212, 0.15);">
+                        <h2 class="accordion-header" id="observationHeadingTen">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#observationCollapseTen" aria-expanded="false" aria-controls="observationCollapseTen" data-bs-parent="#observationsAccordion8" style="background-color: #C4B5FD; color: #4C1D95; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 16px;">
+                            <strong>Observation 10: Ablation studies reveals the effectiveness of KORE's design.</strong>
+                          </button>
+                        </h2>
+                        <div id="observationCollapseTen" class="accordion-collapse collapse" aria-labelledby="observationHeadingTen" data-bs-parent="#observationsAccordion8">
+                          <div class="accordion-body" style="background-color: #faf5ff; border-radius: 0 0 6px 6px; color: #374151; font-weight: 500; font-size: 15px;">
+                            Table 5 validates KORE's design, showing that each ablated component contributes positively to its overall performance. W/o Augmentation is particularly detrimental to knowledge adaptation (<span style="font-weight: bold; color: #dc2626;">19.82↓</span> in CEM and <span style="font-weight: bold; color: #dc2626;">22.95↓</span> in F1-Score). Meanwhile, W/o Constraint and W/o Frozen Matrix <span style="font-weight: bold;">A</span> impairs knowledge retention.
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 text-center mb-2">
                 <img src="KORE\table\7i.png" alt="Image 1" class="img-fluid" />
               </div>
    
